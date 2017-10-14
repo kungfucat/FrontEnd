@@ -45,42 +45,16 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="buy.html">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
+            <span class="nav-link-text">Buy stocks </span>
           </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
-            <span class="nav-link-text">Example Pages</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-            <li>
-              <a href="login.html">Login Page</a>
-            </li>
-            <li>
-              <a href="register.html">Registration Page</a>
-            </li>
-            <li>
-              <a href="forgot-password.html">Forgot Password Page</a>
-            </li>
-            <li>
-              <a href="blank.html">Blank Page</a>
-            </li>
-          </ul>
         </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="Sell.html">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Link</span>
+            <span class="nav-link-text">Sell Stocks </span>
           </a>
         </li>
       </ul>
@@ -91,6 +65,7 @@
           </a>
         </li>
       </ul>
+
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -207,8 +182,10 @@
               <div class="mr-5" ><label for="uname">Add Money : </label></div>
             </div>
               <div>
+                  <form id="addMoneyForm">
     <input type="text" id="uname" name="name" style="width: 180px;">
               <button style="width: 50px; height: 30px; ">Add</button>
+                 </form>
               </div>
               <span class="float-right">
               </span>
@@ -887,6 +864,23 @@
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
+      
+      <script type="text/javascript">
+      
+          $('#addMoneyFrom').submit(function(e){
+             
+              $.ajax({
+                  type:'GET',
+                  url:'/addMoney',
+                  data:{increase :$('#uname').value},
+                  success : function (data){
+                  
+                  }
+              });
+              
+          });
+          
+      </script>
   </div>
 </body>
 
