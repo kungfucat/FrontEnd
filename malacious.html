@@ -7,16 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Cocoon</title>
     <head>
   <link rel="shortcut icon" type="image/x-icon" href="images/a.jpg" />
 </head>
+  <title>Cocoon</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+    
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -54,7 +55,6 @@
           </a>
         </li>
       </ul>
-
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -157,86 +157,15 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="index.html">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Sell Stocks</li>
+        <li class="breadcrumb-item active">Malacious</li>
       </ol>
-      <h1>Sell stocks :</h1>
-      <hr><br><br>
-        
-        <h3>Current Cash : 100000$</h3><br><br>
-        
-        
-      <!-- Icon Cards-->
       <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">FB<br>
-                Current stock : 1000 <br>
-                  Exchange Rate : 10<br>
-                </div>
-            </div>
-              <div>
-                  <form id="form1">
-    <input type="text" id="uname1" name="name1" style="width: 180px;">
-              <button style="width: 50px; height: 30px; ">Add</button></form>
-              </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">SW<br>
-                Current stock : 1000 <br>
-                  Exchange Rate : 10<br></div>           </div>
-           
-              <div>
-                  <form id="form2">
-    <input type="text" id="uname2" name="name2" style="width: 180px;">
-              <button style="width: 50px; height: 30px; ">Add</button></form>
-              </div> </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">HBC<br>
-                Current stock : 1000<br>
-                  Exchange Rate : 10</div>
-            </div>
-              <div>
-                  <form id="form3">
-    <input type="text" id="uname3" name="name3" style="width: 180px;">
-                  <button style="width: 50px; height: 30px; ">Add</button></form>
-              </div>
-                
-                </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-support"></i>
-              </div>
-              <div class="mr-5">WMT<br>
-                Current stock : 1000<br>
-                  Exchange Rate : 10<br></div>        
-            </div>
-
-              <div><form id="form4">
-    <input type="text" id="uname4" name="name4" style="width: 180px;">
-              <button style="width: 50px; height: 30px; ">Add</button></form>
-              </div>
-          </div>
+        <div class="col-12">
+            <br>
+            <h1 id="heading">  <strong><font color="#ff0000">Threat detected!</font></strong></h1><br>
+          <p>Looks like you tried to do something fishy. To continue, you need to provide a 2-factor authentication process and we will contact you soon, </p>
         </div>
       </div>
     </div>
@@ -245,7 +174,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2017</small>
+          <small>Copyright © HackOverflow 2017</small>
         </div>
       </div>
     </footer>
@@ -281,52 +210,5 @@
     <script src="js/sb-admin.min.js"></script>
   </div>
 </body>
-    <script type="text/javascript">
-         
-          $('#form1').submit(function(e){
-             
-              $.ajax({
-                  type:'GET',
-                  url:'/sell',
-                  data:{decrease :$('#uname1').value
-                       type: 'FB'},
-                  success : function (data){
-                  }
-              });
-          }); 
-          $('#form2').submit(function(e){
-             
-              $.ajax({
-                  type:'GET',
-                  url:'/buy',
-                  data:{decrease :$('#uname2').value
-                       type: 'SW'},
-                  success : function (data){
-                  }
-              });
-          }); 
-          $('#form3').submit(function(e){
-             
-              $.ajax({
-                  type:'GET',
-                  url:'/buy',
-                  data:{decrease :$('#uname3').value
-                       type: 'HBC'},
-                  success : function (data){
-                  }
-              });
-          }); 
-          $('#form4').submit(function(e){
-             
-              $.ajax({
-                  type:'GET',
-                  url:'/buy',
-                  data:{decrease :$('#uname4').value
-                       type: 'WMT'},
-                  success : function (data){
-                  }
-              });
-          });
-      </script>
 
 </html>

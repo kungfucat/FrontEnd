@@ -180,8 +180,10 @@
                 </div>
             </div>
               <div>
-    <input type="text" id="uname" name="name" style="width: 180px;">
+                  <form id="form1">
+    <input type="text" id="uname1" name="name1" style="width: 180px;">
               <button style="width: 50px; height: 30px; ">Add</button>
+                  </form>
               </div>
           </div>
         </div>
@@ -196,8 +198,9 @@
                   Exchange Rate : 10<br></div>           </div>
            
               <div>
-    <input type="text" id="uname" name="name" style="width: 180px;">
-              <button style="width: 50px; height: 30px; ">Add</button>
+                  <form id="form2">
+    <input type="text" id="uname2" name="name2" style="width: 180px;">
+              <button style="width: 50px; height: 30px; ">Add</button></form>
               </div> </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-3">
@@ -211,8 +214,9 @@
                   Exchange Rate : 10</div>
             </div>
               <div>
-    <input type="text" id="uname" name="name" style="width: 180px;">
-              <button style="width: 50px; height: 30px; ">Add</button>
+                  <form id="form3">
+    <input type="text" id="uname3" name="name3" style="width: 180px;">
+              <button style="width: 50px; height: 30px; ">Add</button></form>
               </div>
                 
                 </div>
@@ -229,9 +233,11 @@
             </div>
 
               <div>
-    <input type="text" id="uname" name="name" style="width: 180px;">
+                  <form id="form4">
+    <input type="text" id="uname4" name="name4" style="width: 180px;">
               <button style="width: 50px; height: 30px; ">Add</button>
-              </div>
+</form>
+                      </div>
           </div>
         </div>
       </div>
@@ -275,6 +281,53 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
+      <script type="text/javascript">
+         
+          $('#form1').submit(function(e){
+             
+              $.ajax({
+                  type:'GET',
+                  url:'/buy',
+                  data:{increase :$('#uname1').value
+                       type: 'FB'},
+                  success : function (data){
+                  }
+              });
+          }); 
+          $('#form2').submit(function(e){
+             
+              $.ajax({
+                  type:'GET',
+                  url:'/buy',
+                  data:{increase :$('#uname2').value
+                       type: 'SW'},
+                  success : function (data){
+                  }
+              });
+          }); 
+          $('#form3').submit(function(e){
+             
+              $.ajax({
+                  type:'GET',
+                  url:'/buy',
+                  data:{increase :$('#uname3').value
+                       type: 'HBC'},
+                  success : function (data){
+                  }
+              });
+          }); 
+          $('#form4').submit(function(e){
+             
+              $.ajax({
+                  type:'GET',
+                  url:'/buy',
+                  data:{increase :$('#uname4').value
+                       type: 'WMT'},
+                  success : function (data){
+                  }
+              });
+          });
+      </script>
   </div>
 </body>
 
