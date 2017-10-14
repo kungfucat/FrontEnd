@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
+    <head>
+  <link rel="shortcut icon" type="image/x-icon" href="images/a.jpg" />
+</head>
   <meta name="author" content="">
   <title>COCOON</title>
   <!-- Bootstrap core CSS-->
@@ -16,12 +19,21 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+    
+    <style type="text/css">
+    
+        #imageLogo{
+            width: 50px;
+            height: 30px;
+        }
+    
+    </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Your Dashboard</a>
+    <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 200px; height: 60px;"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -419,90 +431,407 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                  <th>Symbol</th>
+                  <th>Order date/time</th>
+                  <th>Transaction date/time</th>
+                  <th>Type</th> 
+                    <th>Amount</th>
+                    <th>Ex. Price</th>
                 </tr>
               </thead>
               <tbody>
-               
-                <tr>
-                  <td>Brenden Wagner</td>
-                  <td>Software Engineer</td>
-                  <td>San Francisco</td>
-                  <td>28</td>
-                  <td>2011/06/07</td>
-                  <td>$206,850</td>
-                </tr>
-               
-                <tr>
-                  <td>Hope Fuentes</td>
-                  <td>Secretary</td>
-                  <td>San Francisco</td>
-                  <td>41</td>
-                  <td>2010/02/12</td>
-                  <td>$109,850</td>
-                </tr>
-                <tr>
-                  <td>Vivian Harrell</td>
-                  <td>Financial Controller</td>
-                  <td>San Francisco</td>
-                  <td>62</td>
-                  <td>2009/02/14</td>
-                  <td>$452,500</td>
-                </tr>
-             
-                <tr>
-                  <td>Sakura Yamamoto</td>
-                  <td>Support Engineer</td>
-                  <td>Tokyo</td>
-                  <td>37</td>
-                  <td>2009/08/19</td>
-                  <td>$139,575</td>
-                </tr>
-                <tr>
-                  <td>Thor Walton</td>
-                  <td>Developer</td>
-                  <td>New York</td>
-                  <td>61</td>
-                  <td>2013/08/11</td>
-                  <td>$98,540</td>
-                </tr>
-                <tr>
-                  <td>Finn Camacho</td>
-                  <td>Support Engineer</td>
-                  <td>San Francisco</td>
-                  <td>47</td>
-                  <td>2009/07/07</td>
-                  <td>$87,500</td>
-                </tr>
-                <tr>
-                  <td>Serge Baldwin</td>
-                  <td>Data Coordinator</td>
-                  <td>Singapore</td>
-                  <td>64</td>
-                  <td>2012/04/09</td>
-                  <td>$138,575</td>
-                </tr>
-                <tr>
-                  <td>Zenaida Frank</td>
-                  <td>Software Engineer</td>
-                  <td>New York</td>
-                  <td>63</td>
-                  <td>2010/01/04</td>
-                  <td>$125,250</td>
-                </tr>
-                <tr>
-                  <td>Zorita Serrano</td>
-                  <td>Software Engineer</td>
-                  <td>San Francisco</td>
-                  <td>56</td>
-                  <td>2012/06/01</td>
-                  <td>$115,000</td>
-                </tr>
+               <tr is="mini-quote-tr" fuid="STOCK-XNAS-AAPL" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">100</td>
+                            <td class="table__cell">$614.99</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$9.49</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-NYQ-HBC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$43.74</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XASQ-WMT" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">WMT</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$71.11</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.64</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-ARNA" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">4,909</td>
+                            <td class="table__cell">$11.24</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="REALESTATEINVESTMENTTRUST-XASQ-CCG" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">CCG</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:51a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:31a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,500</td>
+                            <td class="table__cell">$10.40</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:50a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:30a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.84</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.71</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.59</td>
+                        </tr>
+                  
+               <tr is="mini-quote-tr" fuid="STOCK-XNAS-AAPL" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">100</td>
+                            <td class="table__cell">$614.99</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$9.49</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-NYQ-HBC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$43.74</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XASQ-WMT" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">WMT</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$71.11</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.64</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-ARNA" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">4,909</td>
+                            <td class="table__cell">$11.24</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="REALESTATEINVESTMENTTRUST-XASQ-CCG" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:51a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:31a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,500</td>
+                            <td class="table__cell">$10.40</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:50a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:30a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.84</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.71</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.59</td>
+                        </tr>
+               <tr is="mini-quote-tr" fuid="STOCK-XNAS-AAPL" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:10p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">100</td>
+                            <td class="table__cell">$614.99</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell align--left u-secondary">7/10/12 1:07p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$9.49</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-NYQ-HBC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:22p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$43.74</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XASQ-WMT" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">WMT</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,000</td>
+                            <td class="table__cell">$71.11</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:21p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.64</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-ARNA" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">FB</td>
+                            <td class="table__cell align--left m0 u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell align--left u-secondary">7/6/12 2:20p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">4,909</td>
+                            <td class="table__cell">$11.24</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="REALESTATEINVESTMENTTRUST-XASQ-CCG" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:51a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:31a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">1,500</td>
+                            <td class="table__cell">$10.40</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/5/12 5:50a</td>
+                            <td class="table__cell align--left u-secondary">7/5/12 9:30a</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.84</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-SWHC" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">SW</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 3:16p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Sell
+                                    
+                                    
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$8.71</td>
+                        </tr>
+                        <tr is="mini-quote-tr" fuid="STOCK-XNAS-MU" urlFragment="dataset" class="table__row">
+                            <td class="table__cell">HBC</td>
+                            <td class="table__cell align--left m0 u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell align--left u-secondary">7/2/12 1:09p</td>
+                            <td class="table__cell purchase-type">
+                                <span class="text">Buy
+                                </span>
+                            </td>
+                            <td class="table__cell">5,000</td>
+                            <td class="table__cell">$6.59</td>
+                        </tr>
+                  
+                  
+                  
               </tbody>
             </table>
           </div>
